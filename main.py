@@ -1,8 +1,13 @@
 def list_of_dictionaries_to_dicitonary_of_lists(pilot_tests):
     # this will be the final returned dictionary
     dictionary_of_results = {}
-
-    # ..... complete code .......
+    for test in pilotTests:
+        print("\n Sync Test:")
+        for [pilot, unit] in test.items():
+            # print("{pilot} can sync with {unit}".format(pilot=pilot, unit=unit)) 
+            # print(dictionary_of_results.get(pilot,[]))
+            if(unit not in dictionary_of_results.get(pilot,[])) :
+                dictionary_of_results[pilot] = dictionary_of_results.get(pilot,[]) + [unit]   
 
     return dictionary_of_results
 
